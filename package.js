@@ -12,17 +12,25 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
+  api.use('coffeescript');
 
   Npm.depends({
     "imgix-core-js": "0.2.1"
   });
 
+  api.addFiles([
+    'imgix.js/dist/imgix.js',
+    'imgix.js/dist/imgix.jquery.js'
+  ], 'client');
 
-  api.addFiles('imgix.js');
+  api.addFiles(['loader.coffee'], 'server')
+
+  api.export('imgix', ['client', 'server']);
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('imgix');
-  api.addFiles('imgix-tests.js');
+  api.use('fermuch:imgix');
+  api.use('coffeescript');
+  api.addFiles('imgix-tests.coffee');
 });
