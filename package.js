@@ -10,13 +10,13 @@ Package.describe({
   documentation: 'README.md'
 });
 
+Npm.depends({
+  "imgix-core-js": "0.2.1"
+});
+
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
   api.use('coffeescript');
-
-  Npm.depends({
-    "imgix-core-js": "0.2.1"
-  });
 
   api.addFiles([
     'imgix.js/dist/imgix.js',
