@@ -20,12 +20,14 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'imgix.js/dist/imgix.js',
-    'imgix.js/dist/imgix.jquery.js'
+    'imgix.js/dist/imgix.jquery.js',
+    'loader.coffee'
   ], 'client');
 
   api.addFiles(['loader.coffee'], 'server')
 
-  api.export('imgix', ['client', 'server']);
+  api.export('imgix', 'client');
+  api.export('imgix', 'server');
 });
 
 Package.onTest(function(api) {
