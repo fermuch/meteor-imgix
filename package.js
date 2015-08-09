@@ -16,15 +16,14 @@ Npm.depends({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.3');
-  api.use('coffeescript');
 
   api.addFiles([
     'imgix.js/dist/imgix.js',
     'imgix.js/dist/imgix.jquery.js',
-    'loader.coffee'
+    'loader.js'
   ], 'client');
 
-  api.addFiles(['loader.coffee'], 'server')
+  api.addFiles(['loader.js'], 'server')
 
   api.export('imgix', 'client');
   api.export('imgix', 'server');
