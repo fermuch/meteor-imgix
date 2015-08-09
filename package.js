@@ -19,7 +19,7 @@ Package.onUse(function(api) {
 
   api.addFiles([
     'imgix.js/dist/imgix.min.js',
-    'imgix.js/dist/imgix.jquery.js',
+    'imgix.js/dist/imgix.jquery.min.js',
     'loader.js'
   ], 'client');
 
