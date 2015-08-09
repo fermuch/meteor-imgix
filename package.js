@@ -1,6 +1,6 @@
 Package.describe({
   name: 'fermuch:imgix',
-  version: '0.0.3_2',
+  version: '0.0.3_3',
   // Brief, one-line summary of the package.
   summary: 'imgix server/client wrapped for meteor',
   // URL to the Git repository containing the source code for this package.
@@ -24,7 +24,7 @@ Package.onUse(function(api) {
   ], 'client');
 
   api.addFiles(['loader.js'], 'server');
-  
+
   api.export('imgix', 'client');
   api.export('imgix', 'server');
 });
