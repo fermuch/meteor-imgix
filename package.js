@@ -23,8 +23,8 @@ Package.onUse(function(api) {
     'loader.js'
   ], 'client');
 
-  api.addFiles(['loader.js'], 'server')
-
+  api.addFiles(['loader.js'], 'server');
+  
   api.export('imgix', 'client');
   api.export('imgix', 'server');
 });
